@@ -22,6 +22,9 @@ export const theme = {
       'big-l':'-42px 40px 0px 12px rgba(0,0,0,0.1)',
       'big-r':'42px 40px 0px 12px rgba(0,0,0,0.1)',
       'big-a':'0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20)',
+    },
+    fontFamily:{
+      'poppins':'poopins',
     }
   },
 };

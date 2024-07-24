@@ -3,7 +3,18 @@ import React from 'react'
 function Main() {
   return (
     <div className='bg-br '>
-    <div className=" container mx-auto  p-20">
+
+
+      <div className='md:grid md:grid-cols-2 container p-20 mx-auto' >
+          <div className='flex justify-center align-middle text-center'>
+            <h1 className='text-4xl text-dr font-bold p-5 text-left mb-5  ' >AI-Powered Inventory Management for Sellers.</h1>
+          </div>
+          <div className='flex items-center w-full rounded-3xl '>
+            <img className=' rounded shadow-big-r' src="ai.png" alt="ai" />
+          </div>
+      </div>
+
+    <div className=" container mx-auto mt-10 p-20">
 
       <div className="flex items-center flex-wrap  mb-10">
         
