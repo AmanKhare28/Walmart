@@ -25,7 +25,10 @@ export const theme = {
     },
     fontFamily:{
       'poppins':'poopins',
-    }
+    },
+    plugins: [
+      require('tailwindcss-animated')
+    ],
   },
 };
 export const plugins = [];
