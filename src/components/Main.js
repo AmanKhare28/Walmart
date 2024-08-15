@@ -1,85 +1,89 @@
-import React, { useRef } from 'react'
-import Submain from './Submain'
-import Contactus from './Contactus'
+import React, { useRef } from "react";
+import Submain from "./Submain";
+import Contactus from "./Contactus";
+import ScrollAnimation from "./scrollAnimation";
 
 function Main() {
-  const contactref = useRef(null)
+  const contactref = useRef(null);
 
   return (
-    <>
-    <Submain contactref={contactref} />
-
-    <div className='bg-white '>
-
-    <div className=" container mx-auto p-20">
-
-      <div className="flex items-center flex-wrap  mb-10">
-        
-        <div className="shadow-big-l w-full lg:w-1/4 md:w-1/3 bg-gradient-to-r from-violet-200 to-pink-200 p-5 rounded lg:ml-auto  ">
-          <h4 className="text-3xl  bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent font-semibold mb-5">Top Sellers</h4>
-
-          <div className='flex bg-gradient-to-r from-violet-300 to-pink-300 ' >
-            <img className='w-1/3 h-1/3 2xl:block md:hidden sm:block hidden' src="show1.png" alt="show" />
-
-            <div className='' >
-          <h1 className="p-2 mt-6 md:mt-0 bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent font-bold text-3xl md:text-2xl ">Nike Air Force 1</h1>
-            <p className='px-2 bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent'>Price: <span className='text-yellow-300' >₹4000/-</span></p>
-            <p className='px-2 bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent'>Sales: <span className='text-yellow-300 mb-2 ' >400 unites</span> </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full md:w-1/2 ml-auto mt-20">
-         
-            <h1 className='text-dr text-5xl font-bold mb-5'>Data-Driven Insights</h1>
-            <p className='text-xl text-dr mb-2  ' >Identify Your Best Performers with Top Seller Insights.</p>
-          
-        </div>
-        
+    <div>
+      <ScrollAnimation triggerOnce={false}>
+        <Submain contactref={contactref} />
+      </ScrollAnimation>
+      <div className="flex justify-center mt-20">
+        <ScrollAnimation triggerOnce={true}>
+          <img
+            src="/window.png"
+            width={1200}
+            className="border-zinc-200 border-2 rounded-xl shadow-slate-400 shadow-xl z-20"
+          />
+        </ScrollAnimation>
       </div>
 
-      <div className="flex  flex-wrap mb-20 mt-32">
-        
-        <div className="w-full md:w-1/2 ml-auto mb-14">
-         
-            <h1 className='text-dr text-5xl font-bold mb-5'>Low Stock Alerts</h1>
-            <p className='text-xl text-dr lg:w-1/2 ' >Notifications when inventory dips below a set threshold, preventing stockouts and lost sales.</p>
-          
-        </div>
-      <div className="shadow-big-r w-full lg:w-1/4 md:w-1/3 bg-gradient-to-r from-violet-200 to-pink-200 p-5 rounded lg:mr-auto ">
-          <h4 className="text-3xl  bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent font-semibold mb-5">Low Stock Items</h4>
-
-          <div className='flex bg-gradient-to-r from-violet-300 to-pink-300 ' >
-            <img className='w-1/3 h-1/3 2xl:block md:hidden sm:block hidden' src="show1.png" alt="show" />
-
-            <div className='' >
-          <h1 className="p-2 mt-6 md:mt-0 bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent font-bold text-3xl md:text-2xl ">Nike Air Force 1</h1>
-            <p className='px-2 bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent'>Price: <span className='text-yellow-300' >₹4000/-</span></p>
-            <p className='px-2 mb-2  bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent'>Remaining Stock: <span className='text-yellow-300' >400 unites</span> </p>
+      <ScrollAnimation triggerOnce={true}>
+        <div className="mt-32 flex flex-col items-center w-full">
+          <div className="font-semibold text-3xl text-slate-800 font-poppins border-b-4 border-cyan-500 text-center w-[200px]">
+            Our Features
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-36 mt-8 w-full max-w-7xl">
+            <div className="bg-rose-100 text-white text-center flex flex-col items-baseline rounded-xl p-10 hover:shadow-lg transition-shadow duration-300">
+              <img
+                src="/feature3.png"
+                width={90}
+                alt="AI-Powered Forecasting"
+                className="mb-4 bg-transparent shadow-feature1 rounded-full"
+              />
+              <div className="font-semibold font-poppins text-3xl text-slate-800 border-b-4 border-rose-300 pb-2 w-48 text-left">
+                AI-Powered Forecasting
+              </div>
+              <div className="text-slate-500 text-left mt-6 font-medium text-lg">
+                Accurately predict future demand with our advanced AI
+                algorithms, helping you stay ahead of market trends and optimize
+                inventory levels.
+              </div>
+            </div>
+            <div className="bg-sky-100 text-white text-center flex flex-col items-baseline rounded-xl p-10 hover:shadow-lg transition-shadow duration-300">
+              <img
+                src="/feature2.png"
+                width={90}
+                alt="AI-Powered Forecasting"
+                className="mb-4 bg-transparent shadow-feature2 rounded-full"
+              />
+              <div className="font-semibold font-poppins text-3xl text-slate-800 border-b-4 border-blue-300 pb-2 w-48 text-left">
+                Invoicing System
+              </div>
+              <div className="text-slate-500 text-left mt-6 font-medium text-lg">
+                Streamline your billing process with automated, error-free
+                invoices generated for every purchase and sale and transparent
+                transactions.
+              </div>
+            </div>
+            <div className="bg-green-100 text-white text-center flex flex-col items-baseline rounded-xl p-10 hover:shadow-lg transition-shadow duration-300">
+              <img
+                src="/feature1.png"
+                width={90}
+                alt="AI-Powered Forecasting"
+                className="mb-4 bg-transparent shadow-feature3 rounded-full"
+              />
+              <div className="font-semibold font-poppins text-3xl text-slate-800 border-b-4 border-green-300 pb-2 w-48 text-left">
+                Real-Time Stock Alert
+              </div>
+              <div className="text-slate-500 text-left mt-6 font-medium text-lg">
+                Never run out of stock again with real-time alerts for low
+                inventory levels, ensuring you can reorder products before it's
+                too late.
+              </div>
             </div>
           </div>
-
-          <div className='flex bg-gradient-to-r from-violet-300 to-pink-300 mt-5' >
-            <img className='w-1/3 h-1/3 2xl:block md:hidden sm:block hidden' src="tshirt1.png" alt="show" />
-
-            <div className='' >
-          <h1 className="p-2 mt-6 md:mt-0 bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent font-bold text-3xl md:text-2xl ">White T-Shirt</h1>
-            <p className='px-2 bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent'>Price: <span className='text-yellow-300' >₹500/-</span></p>
-            <p className='px-2 mb-2 bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent'>Remaining Stock: <span className='text-yellow-300' >400 unites</span> </p>
-            </div>
-          </div>
         </div>
+      </ScrollAnimation>
 
+      <div ref={contactref}>
+        <Contactus />
       </div>
-
     </div>
-    </div>
-
-    <div ref={contactref} >
-    <Contactus/>
-    </div>
-    </>
-  )
+  );
 }
 
-export default Main
+export default Main;
